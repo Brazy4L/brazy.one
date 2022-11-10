@@ -14,7 +14,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 	<head>
 		<BaseHead title="Brazy | Blog" description="My thoughts about tech and everything else." />
 	</head>
-	<body>
+	<body class="min-h-screen flex flex-col max-w-[1164px] mx-auto">
 		<Header />
 		<main>
 			<section>

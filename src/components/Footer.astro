@@ -2,21 +2,21 @@
 const today = new Date();
 ---
 
-<footer>
-  <div><a href="mailto:me@brazy.one">me@brazy.one</a></div>
-  <div>
+<footer class="bg-[#202020] h-[200px] grid justify-center items-center rounded-t-full mt-auto">
+  <a class="grid justify-center text-4xl font-bold" href="mailto:me@brazy.one">me@brazy.one</a>
+  <p class="grid grid-flow-col justify-center gap-4">
     <a
       href="https://github.com/Brazy4L"
       target="_blank"
-      rel="noopener noreferrer">Github</a
+      rel="noopener noreferrer"><img src="github.svg" alt=""></a
     >
     <a
       href="https://twitter.com/BrazyJS"
       target="_blank"
-      rel="noopener noreferrer">Twitter</a
+      rel="noopener noreferrer"><img src="twitter.svg" alt=""></a
     >
-  </div>
-  <div>
-    &copy; {today.getFullYear()} Vladislav Boichenko. All rights reserved.
-  </div>
+  </p>
+  <p class="text-lg">
+    © {today.getFullYear()} Vladislav Boichenko. All rights reserved.
+  </p>
 </footer>
