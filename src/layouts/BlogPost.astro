@@ -1,6 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
+import HeaderBlog from '../components/HeaderBlog.astro';
 import Footer from '../components/Footer.astro';
 
 export interface Props {
@@ -23,11 +23,15 @@ const {
     <BaseHead title={title} description={description} />
   </head>
   <body class="min-h-screen flex flex-col max-w-[1164px] mx-auto">
-    <Header />
+    <HeaderBlog />
     <main>
-      <article>
-        {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-        <h1 class="title">{title}</h1>
+      <article class="max-w-[900px] mx-auto px-2">
+        {
+          heroImage && (
+            <img class="rounded pb-4" width="884" height="370" src={heroImage} alt={title} />
+          )
+        }
+        <h1 class="w-max text-4xl">{title}</h1>
         {pubDate && <time>{pubDate}</time>}
         {
           updatedDate && (
