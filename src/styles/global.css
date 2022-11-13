@@ -17,7 +17,7 @@
   height: 4px;
   background-color: #59c3ff;
   border-radius: 9999px;
-  transition: width 0.32s ease-in-out;
+  transition: width 0.3s ease-in;
 }
 
 .inactive {
@@ -26,4 +26,5 @@
   height: 4px;
   background-color: #59c3ff;
   border-radius: 9999px;
+  transition: width 0.3s ease-out;
 }
