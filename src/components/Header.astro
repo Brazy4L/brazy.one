@@ -1,11 +1,14 @@
 ---
+const path = new URL(Astro.request.url).pathname;
 ---
 
 <header class="font-bold text-xl flex justify-between py-9">
   <h2>
-    <a class="hover:text-[#59C3FF] ease-out duration-300" href="/">BRAZY</a>
+    <a class="link" href="/">BRAZY</a>
+    <div class={path === "/" ? "active" : "inactive"}></div>
   </h2>
   <nav>
-    <a class="hover:text-[#59C3FF] ease-out duration-300" href="/blog">BLOG</a>
+    <a class="link" href="/blog">BLOG</a>
+    <div class={path === "/blog" ? "active" : "inactive"}></div>
   </nav>
 </header>

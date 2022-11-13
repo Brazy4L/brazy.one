@@ -4,3 +4,26 @@
   font-family: 'system-ui';
   overflow-y: scroll;
 }
+
+.active {
+  width: 100%;
+  height: 4px;
+  background-color: #59c3ff;
+  border-radius: 9999px;
+}
+
+.link:hover + .inactive {
+  width: 100%;
+  height: 4px;
+  background-color: #59c3ff;
+  border-radius: 9999px;
+  transition: width 0.32s ease-in-out;
+}
+
+.inactive {
+  margin: 0 auto;
+  width: 0%;
+  height: 4px;
+  background-color: #59c3ff;
+  border-radius: 9999px;
+}
