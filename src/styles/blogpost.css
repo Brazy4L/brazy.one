@@ -1,4 +1,9 @@
 .post > h2 {
   font-weight: 700;
   font-size: 1.5rem;
+  margin-top: 28px;
+}
+
+.post > p {
+  margin-top: 14px;
 }

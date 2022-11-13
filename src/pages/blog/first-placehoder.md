@@ -9,3 +9,7 @@ heroImage: '/first-placeholder.svg'
 
 ## Header
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti natus culpa impedit consectetur quae adipisci dolorum. Adipisci distinctio praesentium consequuntur saepe voluptates inventore quam molestiae deserunt, aliquam ratione nemo incidunt.
+## Header #2
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti natus culpa impedit consectetur quae adipisci dolorum. Adipisci distinctio praesentium consequuntur saepe voluptates inventore quam molestiae deserunt, aliquam ratione nemo incidunt.
+
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti natus culpa impedit consectetur quae adipisci dolorum. Adipisci distinctio praesentium consequuntur saepe voluptates inventore quam molestiae deserunt, aliquam ratione nemo incidunt.

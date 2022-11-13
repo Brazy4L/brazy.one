@@ -1,54 +1,6 @@
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/fonts/nunito-v25-latin-regular.woff2') format('woff2'),
-    url('/fonts/nunito-v25-latin-regular.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 500;
-  src: url('/fonts/nunito-v25-latin-500.woff2') format('woff2'),
-    url('/fonts/nunito-v25-latin-500.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 600;
-  src: url('/fonts/nunito-v25-latin-600.woff2') format('woff2'),
-    url('/fonts/nunito-v25-latin-600.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 700;
-  src: url('/fonts/nunito-v25-latin-700.woff2') format('woff2'),
-    url('/fonts/nunito-v25-latin-700.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 800;
-  src: url('/fonts/nunito-v25-latin-800.woff2') format('woff2'),
-    url('/fonts/nunito-v25-latin-800.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 900;
-  src: url('/fonts/nunito-v25-latin-900.woff2') format('woff2'),
-    url('/fonts/nunito-v25-latin-900.woff') format('woff');
-}
-
 :root {
   background-color: #121212;
   color: #fff;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'system-ui';
   overflow-y: scroll;
 }

@@ -1,7 +1,7 @@
 ---
 import '../styles/blogpost.css'
 import BaseHead from '../components/BaseHead.astro';
-import HeaderBlog from '../components/HeaderBlog.astro';
+import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 export interface Props {
@@ -23,14 +23,14 @@ const {
   <head>
     <BaseHead title={title} description={description} />
   </head>
-  <body class="min-h-screen flex flex-col max-w-[1164px] mx-auto">
-    <HeaderBlog />
+  <body class="min-h-screen flex flex-col max-w-[900px] mx-auto px-2">
+    <Header />
     <main>
-      <article class="max-w-[900px] mx-auto px-2 mb-20">
+      <article class="mb-20">
         {
           heroImage && (
             <img
-              class="rounded pb-4"
+              class="rounded"
               width="884"
               height="370"
               src={heroImage}
@@ -38,7 +38,7 @@ const {
             />
           )
         }
-        <h1 class="text-4xl font-bold">{title}</h1>
+        <h1 class="text-3xl font-bold mt-4">{title}</h1>
         <p class="text-neutral-400">
           {pubDate && <time>{pubDate}</time>}
           {
@@ -49,7 +49,7 @@ const {
             )
           }
         </p>
-        <div class="w-1/2 h-1 bg-[#59C3FF] rounded-full my-4"></div>
+        <div class="h-[4px] w-1/4 bg-[#59C3FF] rounded-full mt-7"></div>
         <article class="post">
           <slot />
         </article>

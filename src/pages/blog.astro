@@ -1,6 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import HeaderBlog from '../components/HeaderBlog.astro';
+import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
@@ -19,25 +19,25 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
       description="My thoughts about tech and everything else."
     />
   </head>
-  <body class="min-h-screen flex flex-col max-w-[1164px] mx-auto">
-    <HeaderBlog />
+  <body class="min-h-screen flex flex-col max-w-[900px] mx-auto px-2">
+    <Header />
     <main>
-      <section class="max-w-[900px] mx-auto px-2 mb-20">
+      <section class="mb-20">
         <ul class="grid gap-20">
           {
             posts.map((post) => (
               <li>
                 <a href={post.url}>
                   <img
-                    class="rounded pb-4"
+                    class="rounded"
                     width="884"
                     height="370"
                     src={post.frontmatter.heroImage}
                     alt={post.frontmatter.title}
                   />
-                  <span class="w-max text-4xl font-bold hover:text-[#59C3FF] ease-out duration-300">
+                  <h1 class="w-max text-3xl font-bold hover:text-[#59C3FF] ease-out duration-300 mt-4">
                     {post.frontmatter.title}
-                  </span>
+                  </h1>
                 </a>
                 <p class="text-neutral-400">
                   <time>{post.frontmatter.pubDate}</time>
