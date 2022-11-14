@@ -1,16 +1,14 @@
 ---
+const path = new URL(Astro.request.url).pathname;
 ---
 
 <header class="font-bold text-xl flex justify-between py-9 h-[104px]">
   <h2>
     <a class="link" href="/">BRAZY</a>
-    <div></div>
+    <div class={path === '/' ? 'active' : 'inactive'}></div>
   </h2>
   <nav>
     <a class="link" href="/blog/">BLOG</a>
-    <div></div>
+    <div class={path === '/blog/' ? 'active' : 'inactive'}></div>
   </nav>
 </header>
-<script>
-  import '../js/nav.js';
-</script>

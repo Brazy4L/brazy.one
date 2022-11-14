@@ -17,7 +17,7 @@
   height: 4px;
   background-color: #59c3ff;
   border-radius: 2px;
-  transition: width 0.3s ease-in;
+  transition: width 0.37s ease;
 }
 
 .inactive {
@@ -27,4 +27,5 @@
   background-color: #59c3ff;
   border-radius: 2px;
   transition: width 0.3s ease-out;
+  transform: translateZ(0);
 }
