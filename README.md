@@ -1,10 +1,12 @@
 # Vladislav Boichenko
 This is my personal site and blog [brazy.one](https://brazy.one).
  
-I built it with love, astro & tailwind. 
+Built with love, astro & tailwind. 
 
-Enjoy!
+<strong>Enjoy!<strong/>
+
 ## dev
+
 ```bash
 npm install
 npm run dev
