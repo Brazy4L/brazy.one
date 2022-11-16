@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local(''),
+  src: local('Major Mono Display'),
     url('/fonts/major-mono-display-v12-latin-regular.woff2') format('woff2'),
     url('/fonts/major-mono-display-v12-latin-regular.woff') format('woff');
 }
@@ -17,6 +17,22 @@
   color: #fff;
   font-family: 'system-ui';
   overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+body::-webkit-scrollbar-track {
+  background-color: #121212;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #35363a8c;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #41424785;
 }
 
 .active {
@@ -45,40 +61,41 @@
 }
 
 .rainbow {
-  animation: rainbow 6s linear infinite;
+  font-family: 'Major Mono Display', monospace;
+  animation: rainbow 20s linear infinite, unfade 0.3s ease-in;
 }
 
 @keyframes rainbow {
   0%,
   100% {
-    fill: #ff4a4a;
+    color: #ff4a4a;
   }
   10% {
-    fill: #ffa46f;
+    color: #ffa46f;
   }
   20% {
-    fill: #fcff43;
+    color: #fcff43;
   }
   30% {
-    fill: #bdff67;
+    color: #bdff67;
   }
   40% {
-    fill: #53ffda;
+    color: #53ffda;
   }
   50% {
-    fill: #53c0ff;
+    color: #53c0ff;
   }
   60% {
-    fill: #5e53ff;
+    color: #5e53ff;
   }
   70% {
-    fill: #6453ff;
+    color: #6453ff;
   }
   80% {
-    fill: #ce53ff;
+    color: #ce53ff;
   }
   90% {
-    fill: #ff53ff;
+    color: #ff53ff;
   }
 }
 
@@ -134,7 +151,7 @@
 }
 
 .shdw {
-  animation: around 20s infinite;
+  /* animation: around 20s infinite; */
 }
 
 @keyframes around {
