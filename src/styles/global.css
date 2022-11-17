@@ -22,11 +22,11 @@
 body::-webkit-scrollbar {
   width: 10px;
 }
- 
+
 body::-webkit-scrollbar-track {
   background-color: #121212;
 }
- 
+
 body::-webkit-scrollbar-thumb {
   background-color: #35363a8c;
 }
@@ -62,7 +62,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .rainbow {
   font-family: 'Major Mono Display', monospace;
-  animation: rainbow 20s linear infinite, unfade 0.3s ease-in;
+  animation: rainbow 20s steps(10) infinite, unfade 0.3s ease-in;
 }
 
 @keyframes rainbow {
@@ -150,36 +150,26 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
-.shdw {
-  /* animation: around 20s infinite; */
+.logo {
+  top: 0px;
+  transition: top 0.5s linear;
 }
 
-@keyframes around {
-  0% {
-    box-shadow: -40px 0 #252525;
-  }
-  12.5% {
-    box-shadow: -40px -20px #252525;
-  }
-  25% {
-    box-shadow: 0 -40px #252525;
-  }
-  37.5% {
-    box-shadow: 40px -20px #252525;
-  }
-  50% {
-    box-shadow: 40px 0 #252525;
-  }
-  62.5% {
-    box-shadow: 40px 20px #252525;
-  }
-  75% {
-    box-shadow: 0 40px #252525;
-  }
-  87.5% {
-    box-shadow: -40px 20px #252525;
-  }
-  100% {
-    box-shadow: -40px 0 #252525;
-  }
+.under {
+  left: 6px;
+  top: 80px;
+  box-shadow: 0px 34px 4px 4px #000;
+  transform: scale(1.25, 0.45);
+  transition: top 0.5s linear, box-shadow 0.5s linear;
+}
+
+.updown:hover .logo {
+  top: -20px;
+  transition: top 0.5s linear;
+}
+
+.updown:hover .under {
+  top: 100px;
+  box-shadow: 0px 0px 0px 0px #000;
+  transition: top 0.5s linear, box-shadow 0.5s linear;
 }

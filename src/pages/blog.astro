@@ -27,7 +27,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
           {
             posts.map((post) => (
               <li>
-                <a href={post.url}>
+                <a href={post.url + `/`}>
                   <img
                     class="rounded"
                     width="884"
