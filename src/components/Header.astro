@@ -2,7 +2,7 @@
 const path = new URL(Astro.request.url).pathname;
 ---
 
-<header class="font-bold text-xl flex justify-between py-9 h-[104px] text-slate-200">
+<header class="font-bold text-xl flex justify-between py-9 h-[104px] text-gray-100">
   <h2>
     <a class="link" href="/">BRAZY</a>
     <div class={path === '/' ? 'active' : 'inactive'}></div>

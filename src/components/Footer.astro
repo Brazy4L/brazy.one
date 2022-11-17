@@ -3,39 +3,29 @@ const today = new Date();
 ---
 
 <footer
-  class="bg-[#202020] h-[250px] grid justify-center items-end rounded-t-full mt-auto pb-5"
+  class="bg-[#202020] text-gray-100 grid justify-items-center rounded-t-md mt-auto py-4 gap-4"
 >
   <a
-    class="w-max grid justify-self-center text-2xl font-bold hover:text-[#59C3FF] ease-out duration-300"
+    class="text-2xl font-bold hover:text-[#a786ff] ease-out duration-300"
     href="mailto:me@brazy.one">me@brazy.one</a
   >
-  <p class="grid grid-flow-col justify-center gap-4">
+  <p class="flex gap-4">
     <a
       class="hover:scale-110 ease-out duration-300"
       href="https://github.com/Brazy4L"
       target="_blank"
       rel="noopener noreferrer"
-      ><img
-        width="50"
-        height="50"
-        src="/github.svg"
-        alt="github"
-      />
+      ><img width="50" height="50" src="/github.svg" alt="github" />
     </a>
     <a
       class="hover:scale-110 ease-out duration-300"
       href="https://twitter.com/BrazyJS"
       target="_blank"
       rel="noopener noreferrer"
-      ><img
-        width="50"
-        height="50"
-        src="/twitter.svg"
-        alt="twitter"
-      />
+      ><img width="50" height="50" src="/twitter.svg" alt="twitter" />
     </a>
   </p>
-  <p class="min-[425px]:text-lg px-2 max-[381px]:w-[225px] text-center">
+  <p class="text-lg">
     © {today.getFullYear()} Vladislav Boichenko
   </p>
 </footer>

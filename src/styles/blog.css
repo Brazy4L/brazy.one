@@ -2,8 +2,11 @@
   font-weight: 700;
   font-size: 1.5rem;
   margin-top: 28px;
+  color: #d1d5db;
 }
 
 .post > p {
+  font-size: 1.25rem;
+  color: #b3b8c0;
   margin-top: 14px;
 }

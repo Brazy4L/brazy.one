@@ -29,17 +29,17 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
               <li>
                 <a href={post.url + `/`}>
                   <img
-                    class="rounded"
+                    class="rounded-md"
                     width="884"
                     height="370"
                     src={post.frontmatter.heroImage}
                     alt={post.frontmatter.title}
                   />
-                  <h1 class="w-max text-3xl font-bold hover:text-[#59C3FF] ease-out duration-300 mt-4">
+                  <h1 class="w-max text-3xl font-bold text-gray-200 hover:text-[#a786ff] ease-out duration-300 mt-4">
                     {post.frontmatter.title}
                   </h1>
                 </a>
-                <p class="text-neutral-400">
+                <p class="text-gray-400">
                   <time>{post.frontmatter.pubDate}</time>
                   {post.frontmatter.updatedDate && (
                     <span>
