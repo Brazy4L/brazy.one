@@ -9,7 +9,7 @@
 }
 
 :root {
-  --s: 6;
+  --s: 7;
   --h: 40;
   --w: 234.84;
   --speed: 2s;
@@ -127,7 +127,6 @@ body::-webkit-scrollbar-thumb:hover {
   width: 100%;
   flex-shrink: 0;
   text-align: center;
-  cursor: pointer;
   animation: liSlide calc(var(--speed)) infinite;
 }
 
@@ -172,4 +171,9 @@ body::-webkit-scrollbar-thumb:hover {
   top: 100px;
   box-shadow: 0px 0px 0px 0px #000;
   transition: top 0.5s linear, box-shadow 0.5s linear;
+}
+
+.vertical {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
 }
