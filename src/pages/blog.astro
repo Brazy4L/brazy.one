@@ -15,15 +15,16 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 <html lang="en">
   <head>
     <BaseHead
-      title="Brazy | Blog"
+      title="BRAZY | BLOG"
       description="My thoughts about tech and everything else."
     />
   </head>
   <body class="min-h-screen flex flex-col max-w-[700px] mx-auto px-2">
     <Header />
+    <h1 class="flex justify-center text-4xl font-bold pb-10">BRAZY'S BLOG</h1>
     <main>
-      <section class="mb-20">
-        <ul class="grid gap-20">
+      <section>
+        <ul class="grid gap-10 pb-20">
           {
             posts.map((post) => (
               <li>
@@ -35,9 +36,9 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
                     src={post.frontmatter.heroImage}
                     alt={post.frontmatter.title}
                   />
-                  <h1 class="w-max text-3xl font-bold text-gray-200 hover:text-[#a786ff] ease-out duration-300 mt-4">
+                  <h2 class="w-max text-3xl font-bold text-gray-200 hover:text-[#a786ff] ease-out duration-300 mt-4">
                     {post.frontmatter.title}
-                  </h1>
+                  </h2>
                 </a>
                 <p class="text-gray-400">
                   <time>{post.frontmatter.pubDate}</time>
