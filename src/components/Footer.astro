@@ -1,4 +1,6 @@
 ---
+import { Sprite } from 'astro-icon';
+
 const today = new Date();
 ---
 
@@ -10,20 +12,24 @@ const today = new Date();
     href="mailto:me@brazy.one">me@brazy.one</a
   >
   <p class="flex gap-4">
-    <a
-      class="hover:scale-110 ease-out duration-300"
-      href="https://github.com/Brazy4L"
-      target="_blank"
-      rel="noopener noreferrer"
-      ><img width="50" height="50" src="/github.svg" alt="github" />
-    </a>
-    <a
-      class="hover:scale-110 ease-out duration-300"
-      href="https://twitter.com/BrazyJS"
-      target="_blank"
-      rel="noopener noreferrer"
-      ><img width="50" height="50" src="/twitter.svg" alt="twitter" />
-    </a>
+    <Sprite.Provider>
+      <a
+        class="hover:scale-110 ease-out duration-300"
+        href="https://github.com/Brazy4L"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Sprite width="50px" height="50px" name="simple-icons:github" />
+      </a>
+      <a
+        class="hover:scale-110 ease-out duration-300"
+        href="https://twitter.com/BrazyJS"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Sprite width="50px" height="50px" name="simple-icons:twitter" />
+      </a>
+    </Sprite.Provider>
   </p>
   <div class="text-lg text-center">
     © {today.getFullYear()} Vladislav Boichenko.
