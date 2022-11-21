@@ -21,8 +21,8 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
   </head>
   <body class="min-h-screen flex flex-col max-w-[700px] mx-auto px-2">
     <Header />
-    <h1 class="text-4xl font-mono text-gray-100 text-center mt-10">
-      BRAZY'S BLOG
+    <h1 class="nickname text-4xl text-gray-100 text-center mt-10">
+      BRAZY<span class="text-[#a786ff]">'</span>S BLOG
     </h1>
     <main>
       <section>
@@ -38,7 +38,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
                     src={post.frontmatter.heroImage}
                     alt="Illustration by Vladislav Boichnenko"
                   />
-                  <h2 class="w-max text-3xl font-bold text-gray-200 hover:text-[#a786ff] ease-out duration-300 mt-4">
+                  <h2 class="text-3xl font-bold text-gray-200 hover:text-[#a786ff] ease-out duration-300 mt-4">
                     {post.frontmatter.title}
                   </h2>
                 </a>

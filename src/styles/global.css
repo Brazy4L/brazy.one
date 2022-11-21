@@ -8,6 +8,21 @@
     url('/fonts/major-mono-display-v12-latin-regular.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Train One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Train One'),
+    url('../fonts/train-one-v13-latin-regular.woff2') format('woff2'),
+    url('../fonts/train-one-v13-latin-regular.woff') format('woff');
+}
+
+.nickname {
+  font-family: 'Train One', cursive;
+  animation: unfade 0.3s ease-in;
+}
+
 :root {
   --s: 8;
   --h: 40;
@@ -15,7 +30,7 @@
   --speed: 2s;
   background-color: #121212;
   color: #fff;
-  font-family: 'system-ui';
+  font-family: 'system-ui', sans-serif;
   overflow-y: scroll;
 }
 
