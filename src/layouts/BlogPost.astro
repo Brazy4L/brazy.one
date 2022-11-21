@@ -28,9 +28,11 @@ const timeToRead = readingTime(Astro.props.compiledContent());
   <body class="min-h-screen flex flex-col max-w-[700px] mx-auto px-2">
     <Header />
     <main>
-      <article class="mb-20">
-        <h1 class="text-3xl font-bold text-gray-200">{title}</h1>
-        <p class="text-gray-400">
+      <article class="mt-10 mb-10">
+        <h1 class="text-3xl font-bold text-gray-200 text-center">
+          {title}
+        </h1>
+        <p class="text-gray-400 text-center mt-3">
           {pubDate && <time>{pubDate}</time>}
           {
             updatedDate && (
@@ -41,7 +43,7 @@ const timeToRead = readingTime(Astro.props.compiledContent());
           }
           {timeToRead && <span>{timeToRead}</span>}
         </p>
-        <p class="text-gray-400">by Vladislav Boichenko</p>
+        <p class="text-gray-400 text-center">by Vladislav Boichenko</p>
         {
           heroImage && (
             <img
@@ -56,6 +58,9 @@ const timeToRead = readingTime(Astro.props.compiledContent());
         <article class="post">
           <slot />
         </article>
+        <div class="mt-10">
+          <a href="/blog/" class="underline">Back to BRAZY'S BLOG</a>
+        </div>
       </article>
     </main>
     <Footer />

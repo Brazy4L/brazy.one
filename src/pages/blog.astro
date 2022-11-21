@@ -21,12 +21,12 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
   </head>
   <body class="min-h-screen flex flex-col max-w-[700px] mx-auto px-2">
     <Header />
-    <h1 class="text-center text-4xl pt-5 pb-10 text-gray-100 font-mono">
+    <h1 class="text-4xl font-mono text-gray-100 text-center mt-10">
       BRAZY'S BLOG
     </h1>
     <main>
       <section>
-        <ul class="grid gap-10 pb-20">
+        <ul class="grid gap-10 mt-10 mb-10">
           {
             posts.map((post) => (
               <li>
@@ -46,8 +46,8 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
                   <time>{post.frontmatter.pubDate}</time>
                   {post.frontmatter.updatedDate && (
                     <span>
-                      (Updated:
-                      <time>{post.frontmatter.updatedDate}</time>)
+                      • Updated:
+                      <time>{post.frontmatter.updatedDate}</time>
                     </span>
                   )}
                 </p>

@@ -1,12 +1,19 @@
 .post > h2 {
   font-weight: 700;
   font-size: 1.5rem;
-  margin-top: 28px;
+  margin-top: 2.5rem;
+  color: #d1d5db;
+}
+
+.post > h3 {
+  font-weight: 600;
+  font-size: 1.35rem;
+  margin-top: 1rem;
   color: #d1d5db;
 }
 
 .post > p {
   font-size: 1.25rem;
   color: #b3b8c0;
-  margin-top: 14px;
+  margin-top: 1rem;
 }
