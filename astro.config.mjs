@@ -5,16 +5,14 @@ import tailwind from '@astrojs/tailwind';
 import partytown from '@astrojs/partytown';
 
 // https://astro.build/config
+import prefetch from "@astrojs/prefetch";
+
+// https://astro.build/config
 export default defineConfig({
   site: 'https://brazy.one',
-  integrations: [
-    mdx(),
-    sitemap(),
-    tailwind(),
-    partytown({
-      config: {
-        forward: ['dataLayer.push'],
-      },
-    }),
-  ],
+  integrations: [mdx(), sitemap(), tailwind(), partytown({
+    config: {
+      forward: ['dataLayer.push']
+    }
+  }), prefetch()]
 });

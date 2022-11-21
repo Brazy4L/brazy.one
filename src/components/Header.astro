@@ -7,11 +7,11 @@ const path = new URL(Astro.request.url).pathname;
 >
   <nav class="py-7 flex justify-between items-center">
     <div>
-      <a class="link" href="/">BRAZY</a>
+      <a class="link" href="/" rel="prefetch">BRAZY</a>
       <div class={path === '/' ? 'active' : 'inactive'}></div>
     </div>
     <div>
-      <a class="link" href="/blog/">BLOG</a>
+      <a class="link" href="/blog/" rel="prefetch">BLOG</a>
       <div class={path === '/blog/' ? 'active' : 'inactive'}></div>
     </div>
   </nav>
