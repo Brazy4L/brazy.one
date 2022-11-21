@@ -14,8 +14,8 @@
   font-weight: 400;
   font-display: swap;
   src: local('Train One'),
-    url('../fonts/train-one-v13-latin-regular.woff2') format('woff2'),
-    url('../fonts/train-one-v13-latin-regular.woff') format('woff');
+    url('/fonts/train-one-v13-latin-regular.woff2') format('woff2'),
+    url('/fonts/train-one-v13-latin-regular.woff') format('woff');
 }
 
 .nickname {
