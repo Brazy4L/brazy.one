@@ -27,6 +27,7 @@
   color: #fff;
   font-family: 'system-ui', sans-serif;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 .active {

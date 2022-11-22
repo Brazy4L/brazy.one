@@ -1,8 +1,16 @@
 ---
-import { Sprite } from 'astro-icon';
-
+import { Icon } from 'astro-icon';
 const today = new Date();
 ---
+
+<style lang="css">
+  [astro-icon] {
+    transition: color 0.3s ease-out;
+  }
+  [astro-icon='simple-icons:twitter']:hover {
+    color: #1d9bf0;
+  }
+</style>
 
 <footer
   class="bg-[#202020] text-gray-100 grid justify-items-center rounded-t-[40px] mt-auto py-4 gap-4"
@@ -12,24 +20,24 @@ const today = new Date();
     href="mailto:me@brazy.one">me@brazy.one</a
   >
   <p class="flex gap-4">
-    <Sprite.Provider>
-      <a
-        class="hover:scale-110 ease-out duration-300"
-        href="https://github.com/Brazy4L"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Sprite width="50px" height="50px" name="simple-icons:github" />
-      </a>
-      <a
-        class="hover:scale-110 ease-out duration-300"
-        href="https://twitter.com/BrazyJS"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Sprite width="50px" height="50px" name="simple-icons:twitter" />
-      </a>
-    </Sprite.Provider>
+    <a
+      class="ghbg hover:scale-110 ease-out duration-300"
+      href="https://github.com/Brazy4L"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="GitHub"
+    >
+      <Icon width="50px" height="50px" name="simple-icons:github" />
+    </a>
+    <a
+      class="hover:scale-110 ease-out duration-300"
+      href="https://twitter.com/BrazyJS"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Twitter"
+    >
+      <Icon width="50px" height="50px" name="simple-icons:twitter" />
+    </a>
   </p>
   <div class="text-lg text-center">
     © {today.getFullYear()} Vladislav Boichenko.
