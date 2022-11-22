@@ -33,10 +33,10 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
                 <a href={post.url + `/`} rel="prefetch">
                   <img
                     class="rounded-sm"
-                    width="884"
-                    height="370"
+                    width="684"
+                    height="342"
                     src={post.frontmatter.heroImage}
-                    alt="Illustration by Vladislav Boichnenko"
+                    alt="Illustration by Vladislav Boichenko"
                   />
                   <h2 class="text-3xl font-bold text-gray-200 hover:text-[#a786ff] ease-out duration-300 mt-4">
                     {post.frontmatter.title}
