@@ -2,7 +2,7 @@
 layout: '../../layouts/BlogPost.astro'
 title: 'Article'
 description: 'Soon'
-pubDate:
+pubDate: '22 November, 2022'
 updatedDate:
 heroImage: '/placeholder.svg'
 ---
