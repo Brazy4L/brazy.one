@@ -7,7 +7,7 @@
     font-family: 'Major Mono Display';
     font-style: normal;
     font-weight: 400;
-    font-display: swap;
+    font-display: block;
     src: local('Major Mono Display'),
       url('/fonts/major-mono-display-v12-latin-regular.woff2') format('woff2'),
       url('/fonts/major-mono-display-v12-latin-regular.woff') format('woff');
@@ -17,7 +17,7 @@
     font-family: 'Train One';
     font-style: normal;
     font-weight: 400;
-    font-display: swap;
+    font-display: block;
     src: local('Train One'),
       url('/fonts/train-one-v13-latin-regular.woff2') format('woff2'),
       url('/fonts/train-one-v13-latin-regular.woff') format('woff');
@@ -104,6 +104,17 @@
   transition: top 0.5s linear, box-shadow 0.5s linear;
 }
 
+.logo-shadow {
+  box-shadow: 0px 0px 2px 4px #161616;
+  transition: top 0.5s linear, box-shadow 0.5s linear, width 0.5s linear;
+}
+
+.updown:hover .logo-shadow {
+  width: 120px;
+  top: 100px;
+  box-shadow: 0px 0px 2px 8px #161616;
+}
+
 .vertical {
   writing-mode: vertical-lr;
   text-orientation: upright;
@@ -176,4 +187,24 @@ body::-webkit-scrollbar-thumb:hover {
   90% {
     color: #ff53ff;
   }
+}
+
+.post > h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  color: #d1d5db;
+}
+
+.post > h3 {
+  font-weight: 600;
+  font-size: 1.35rem;
+  margin-top: 1rem;
+  color: #d1d5db;
+}
+
+.post > p {
+  font-size: 1.25rem;
+  color: #b3b8c0;
+  margin-top: 1rem;
 }
