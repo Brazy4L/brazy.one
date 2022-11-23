@@ -1,33 +1,37 @@
-@font-face {
-  font-family: 'Major Mono Display';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Major Mono Display'),
-    url('/fonts/major-mono-display-v12-latin-regular.woff2') format('woff2'),
-    url('/fonts/major-mono-display-v12-latin-regular.woff') format('woff');
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@font-face {
-  font-family: 'Train One';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Train One'),
-    url('/fonts/train-one-v13-latin-regular.woff2') format('woff2'),
-    url('/fonts/train-one-v13-latin-regular.woff') format('woff');
-}
+@layer base {
+  @font-face {
+    font-family: 'Major Mono Display';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Major Mono Display'),
+      url('/fonts/major-mono-display-v12-latin-regular.woff2') format('woff2'),
+      url('/fonts/major-mono-display-v12-latin-regular.woff') format('woff');
+  }
 
-:root {
-  --s: 8;
-  --h: 40;
-  --w: 234.84;
-  --speed: 2s;
-  background-color: #121212;
-  color: #fff;
-  font-family: 'system-ui', sans-serif;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+  @font-face {
+    font-family: 'Train One';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Train One'),
+      url('/fonts/train-one-v13-latin-regular.woff2') format('woff2'),
+      url('/fonts/train-one-v13-latin-regular.woff') format('woff');
+  }
+
+  :root {
+    --s: 8;
+    --h: 40;
+    --w: 234.84;
+    --speed: 2s;
+    background-color: #121212;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
 }
 
 .active {
@@ -55,13 +59,7 @@
   transition: width 0.37s ease;
 }
 
-.name {
-  font-family: 'Major Mono Display', monospace;
-  animation: unfade 0.3s ease-in;
-}
-
 .rainbow {
-  font-family: 'Major Mono Display', monospace;
   animation: rainbow 20s steps(10) infinite, unfade 0.3s ease-in;
 }
 
@@ -127,15 +125,6 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: #41424785;
 }
 
-@keyframes unfade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes slide {
   0% {
     transform: translate(0, 0);
@@ -187,9 +176,4 @@ body::-webkit-scrollbar-thumb:hover {
   90% {
     color: #ff53ff;
   }
-}
-
-.nickname {
-  font-family: 'Train One', sans-serif;
-  animation: unfade 0.3s ease-in;
 }

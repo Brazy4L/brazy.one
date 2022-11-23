@@ -7,5 +7,13 @@ import prefetch from '@astrojs/prefetch';
 
 export default defineConfig({
   site: 'https://brazy.one',
-  integrations: [mdx(), sitemap(), tailwind(), partytown(), prefetch()],
+  integrations: [
+    mdx(),
+    sitemap(),
+    tailwind({
+      config: { applyBaseStyles: false },
+    }),
+    partytown(),
+    prefetch(),
+  ],
 });
