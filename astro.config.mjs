@@ -5,6 +5,7 @@ import tailwind from '@astrojs/tailwind';
 import partytown from '@astrojs/partytown';
 import prefetch from '@astrojs/prefetch';
 import compress from "astro-compress";
+import robotsTxt from 'astro-robots-txt';
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,5 +14,5 @@ export default defineConfig({
     config: {
       applyBaseStyles: false
     }
-  }), partytown(), prefetch(), compress()]
+  }), partytown(), prefetch(), robotsTxt(), compress()]
 });
