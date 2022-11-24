@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import readingTime from '../js/readingTime';
+import { Icon } from 'astro-icon';
 
 export interface Props {
   content: {
@@ -22,7 +23,11 @@ const timeToRead = readingTime(Astro.props.compiledContent());
 
 <html lang="en">
   <head>
-    <BaseHead title={`${title} | BRAZY'S BLOG`} description={description} />
+    <BaseHead
+      title={`${title} | BRAZY'S BLOG`}
+      description={description}
+      image={heroImage}
+    />
   </head>
   <body class="min-h-screen flex flex-col max-w-[700px] mx-auto px-2">
     <Header />
@@ -31,26 +36,40 @@ const timeToRead = readingTime(Astro.props.compiledContent());
         <h1 class="text-3xl font-bold text-gray-200 text-center">
           {title}
         </h1>
-        <p class="text-gray-400 text-center mt-3">
+        <div
+          class="flex flex-wrap justify-center gap-x-1 text-gray-400 text-center mt-3"
+        >
           {pubDate && <time>{pubDate}</time>}
           {
             updatedDate && (
               <span>
-                • Updated: <time>{updatedDate}</time>
+                (Updated: <time>{updatedDate}</time>)
               </span>
             )
           }
-          {timeToRead && <span>{timeToRead}</span>}
-        </p>
+          {
+            timeToRead && (
+              <span class="flex gap-x-1">
+                <Icon
+                  class="self-center"
+                  width="23px"
+                  height="23px"
+                  name="maki:watch"
+                />
+                {timeToRead}
+              </span>
+            )
+          }
+        </div>
         <p class="text-gray-400 text-center">by Vladislav Boichenko</p>
         {
           heroImage && (
             <img
               class="rounded-sm mt-10"
-              width="884"
-              height="370"
+              width="684"
+              height="342"
               src={heroImage}
-              alt={title}
+              alt="Illustration by Vladislav Boichenko"
             />
           )
         }
@@ -58,9 +77,14 @@ const timeToRead = readingTime(Astro.props.compiledContent());
           <slot />
         </article>
         <div class="text-gray-200 mt-10">
-          <a href="/blog/" rel="prefetch" class="underline"
-            >Back to BRAZY'S BLOG</a
+          <a
+            href="/blog/"
+            rel="prefetch"
+            class="flex gap-x-1 items-center underline"
           >
+            <Icon width="21px" height="21px" name="maki:arrow" />
+            <div>Back to BRAZY'S BLOG</div>
+          </a>
         </div>
       </article>
     </main>

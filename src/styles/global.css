@@ -189,6 +189,34 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
+.blog-post {
+  transition: background-color 0.25s linear;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.hero-image {
+  transition: transform 0.35s linear;
+}
+
+.blog-post-title {
+  transition: color 0.3s ease-out;
+}
+
+.blog-post:hover {
+  background-color: #202020;
+}
+
+.blog-post:hover .blog-post-title {
+  color: #a786ff;
+}
+
+.blog-post:hover .hero-image {
+  transform: scale(1.15);
+}
+
 .post > h2 {
   font-weight: 700;
   font-size: 1.5rem;

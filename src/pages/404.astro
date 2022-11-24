@@ -7,9 +7,14 @@
     <style>
       :root {
         background-color: #121212;
-        color: #fff;
+        color: #f1ebeb;
       }
-
+      body {
+        margin: 0;
+      }
+      h1 {
+        margin: 0;
+      }
       .main {
         display: flex;
         flex-direction: column;
@@ -19,19 +24,23 @@
         width: 100vw;
         gap: 30px;
         font-size: 3rem;
+        font-family: sans-serif;
       }
-
       .error {
         font-weight: 700;
         color: #59c3ff;
+      }
+      .back {
+        color: #f1ebeb;
       }
     </style>
   </head>
   <body>
     <main>
       <h1 class="main">
-        <img width="300" height="300" src="/favicon.svg" alt="favicon" />
+        <img width="280" height="280" src="/favicon.svg" alt="logo" />
         <span><span class="error">404:</span> Not Found</span>
+        <a class="back" href="/">back to brazy.one</a>
       </h1>
     </main>
   </body>

@@ -4,5 +4,5 @@ title: 'Article'
 description: 'Soon'
 pubDate: '22 November, 2022'
 updatedDate:
-heroImage: '/placeholder.svg'
+heroImage: '/article.png'
 ---
