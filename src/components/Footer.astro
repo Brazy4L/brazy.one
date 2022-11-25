@@ -19,15 +19,24 @@ const today = new Date();
     class="text-2xl font-bold hover:text-[#a786ff] ease-out duration-300"
     href="mailto:me@brazy.one">me@brazy.one</a
   >
-  <p class="flex gap-4">
+  <div class="flex gap-4">
     <a
-      class="hover:scale-110 ease-out duration-300"
+      class="hover:scale-110 transition-transform ease-out duration-300 gh-container grid"
       href="https://github.com/Brazy4L"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="GitHub"
     >
-      <Icon width="50px" height="50px" name="simple-icons:github" />
+      <div
+        class="col-start-1 row-start-1 transition-opacity ease-out duration-300 w-[50px] h-[50px] gh"
+      >
+      </div>
+      <Icon
+        class="col-start-1 row-start-1 gh-icon z-10"
+        width="50px"
+        height="50px"
+        name="simple-icons:github"
+      />
     </a>
     <a
       class="hover:scale-110 ease-out duration-300"
@@ -38,7 +47,7 @@ const today = new Date();
     >
       <Icon width="50px" height="50px" name="simple-icons:twitter" />
     </a>
-  </p>
+  </div>
   <div class="text-lg text-center">
     © {today.getFullYear()} Vladislav Boichenko.
     <p>All rights reserved.</p>

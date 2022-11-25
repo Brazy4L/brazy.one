@@ -173,8 +173,25 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
+.gh {
+  background: linear-gradient(#fff, #fff);
+  background-size: 38px 40px;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  border-radius: 9999px;
+  opacity: 0;
+}
+
+.gh-container:hover .gh {
+  opacity: 1;
+}
+
+.gh-container:hover .gh-icon {
+  color: #000;
+}
+
 .blog-post {
-  transition: background-color 0.25s linear;
+  transition: background-color 0.3s linear;
 }
 
 .image-container {
@@ -182,7 +199,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .hero-image {
-  transition: transform 0.35s linear;
+  transition: transform 0.3s ease-out;
 }
 
 .blog-post-title {
