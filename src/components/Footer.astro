@@ -5,7 +5,7 @@ const today = new Date();
 
 <style lang="css">
   [astro-icon] {
-    transition: color 0.3s ease-out;
+    transition: color 0.32s linear;
   }
   [astro-icon='simple-icons:twitter']:hover {
     color: #1d9bf0;
@@ -16,30 +16,29 @@ const today = new Date();
   class="bg-[#202020] text-gray-100 grid justify-items-center rounded-t-[40px] mt-auto py-4 gap-4"
 >
   <a
-    class="text-2xl font-bold hover:text-[#a786ff] ease-out duration-300"
+    class="text-2xl font-bold hover:text-[#a786ff] linear duration-300"
     href="mailto:me@brazy.one">me@brazy.one</a
   >
   <div class="flex gap-4">
     <a
-      class="hover:scale-110 transition-transform ease-out duration-300 gh-container grid"
+      class="links gh-container grid"
       href="https://github.com/Brazy4L"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="GitHub"
     >
       <div
-        class="col-start-1 row-start-1 transition-opacity ease-out duration-300 w-[50px] h-[50px] gh"
+        class="gh col-start-1 row-start-1 transition-opacity linear duration-[1.3s] w-[50px] h-[50px]"
       >
       </div>
       <Icon
-        class="col-start-1 row-start-1 gh-icon z-10"
+        class="gh-icon col-start-1 row-start-1 z-10"
         width="50px"
         height="50px"
         name="simple-icons:github"
       />
     </a>
     <a
-      class="hover:scale-110 ease-out duration-300"
       href="https://twitter.com/BrazyJS"
       target="_blank"
       rel="noopener noreferrer"
