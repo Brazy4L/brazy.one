@@ -8,9 +8,8 @@
     font-style: normal;
     font-weight: 400;
     font-display: block;
-    src: local('Major Mono Display'),
-      url('/fonts/major-mono-display-v12-latin-regular.woff2') format('woff2'),
-      url('/fonts/major-mono-display-v12-latin-regular.woff') format('woff');
+    src: url('/fonts/major-mono-display-v12-latin-regular.woff2')
+      format('woff2');
   }
 
   @font-face {
@@ -18,16 +17,10 @@
     font-style: normal;
     font-weight: 400;
     font-display: block;
-    src: local('Train One'),
-      url('/fonts/train-one-v13-latin-regular.woff2') format('woff2'),
-      url('/fonts/train-one-v13-latin-regular.woff') format('woff');
+    src: url('/fonts/train-one-v13-latin-regular.woff2') format('woff2');
   }
 
   :root {
-    --s: 8;
-    --h: 40;
-    --w: 234.84;
-    --speed: 2s;
     background-color: #121212;
     overflow-y: scroll;
     scroll-behavior: smooth;
@@ -60,10 +53,29 @@
 }
 
 .rainbow {
-  animation: rainbow 20s steps(10) infinite, unfade 0.3s ease-in;
+  --bg-size: 300%;
+  --color-one: hsl(50 100% 50%);
+  --color-two: hsl(160 100% 50%);
+  --color-three: hsl(290 100% 50%);
+  background: linear-gradient(
+      90deg,
+      var(--color-one),
+      var(--color-two),
+      var(--color-three),
+      var(--color-one)
+    )
+    0 0 / var(--bg-size) 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: rainbow 8s steps(100) infinite;
 }
 
 .slide {
+  --s: 8;
+  --h: 40;
+  --w: 234.84;
+  --speed: 2s;
   width: calc(var(--w) * 1px);
   height: calc(var(--h) * 1px);
   line-height: calc(var(--h) * 1px);
@@ -156,36 +168,8 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 @keyframes rainbow {
-  0%,
-  100% {
-    color: #ff4a4a;
-  }
-  10% {
-    color: #ffa46f;
-  }
-  20% {
-    color: #fcff43;
-  }
-  30% {
-    color: #bdff67;
-  }
-  40% {
-    color: #53ffda;
-  }
-  50% {
-    color: #53c0ff;
-  }
-  60% {
-    color: #5e53ff;
-  }
-  70% {
-    color: #6453ff;
-  }
-  80% {
-    color: #ce53ff;
-  }
-  90% {
-    color: #ff53ff;
+  to {
+    background-position: var(--bg-size) 0;
   }
 }
 
