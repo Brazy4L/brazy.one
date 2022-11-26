@@ -186,30 +186,6 @@ body::-webkit-scrollbar-thumb:hover {
   opacity: 1;
 }
 
-.gh-container:hover .gh-icon {
-  color: #000;
-}
-
-.blog-post {
-  transition: background-color 0.3s linear;
-}
-
-.image-container {
-  overflow: hidden;
-}
-
-.hero-image {
-  transition: transform 0.3s ease-out;
-}
-
-.blog-post-title {
-  transition: color 0.3s ease-out;
-}
-
-.blog-post:hover {
-  background-color: #202020;
-}
-
 .blog-post:hover .blog-post-title {
   color: #a786ff;
 }

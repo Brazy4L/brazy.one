@@ -3,20 +3,11 @@ import { Icon } from 'astro-icon';
 const today = new Date();
 ---
 
-<style lang="css">
-  [astro-icon] {
-    transition: color 0.32s linear;
-  }
-  [astro-icon='simple-icons:twitter']:hover {
-    color: #1d9bf0;
-  }
-</style>
-
 <footer
   class="bg-[#202020] text-gray-100 grid justify-items-center rounded-t-[40px] mt-auto py-4 gap-4"
 >
   <a
-    class="text-2xl font-bold hover:text-[#a786ff] linear duration-300"
+    class="text-2xl font-bold hover:text-[#a786ff] duration-500 ease-cubic"
     href="mailto:me@brazy.one">me@brazy.one</a
   >
   <div class="flex gap-4">
@@ -28,17 +19,18 @@ const today = new Date();
       aria-label="GitHub"
     >
       <div
-        class="gh col-start-1 row-start-1 transition-opacity linear duration-[1.3s] w-[50px] h-[50px]"
+        class="gh col-start-1 row-start-1 transition-opacity duration-500 ease-cubic w-[50px] h-[50px]"
       >
       </div>
       <Icon
-        class="gh-icon col-start-1 row-start-1 z-10"
+        class="col-start-1 row-start-1 z-10 hover:text-[#000] duration-500 ease-cubic"
         width="50px"
         height="50px"
         name="simple-icons:github"
       />
     </a>
     <a
+      class="hover:text-[#1d9bf0] duration-500 ease-cubic"
       href="https://twitter.com/BrazyJS"
       target="_blank"
       rel="noopener noreferrer"
