@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { Icon } from 'astro-icon';
 
 const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
   (a, b) =>
@@ -18,7 +19,13 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
       description="My thoughts about tech and everything else."
       image="/blog.png"
     />
-    <link rel="preload" href="/fonts/train.woff2" as="font" type="font/woff2" crossorigin>
+    <link
+      rel="preload"
+      href="/fonts/train.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
   </head>
   <body class="min-h-screen flex flex-col max-w-[700px] mx-auto px-2">
     <Header />
@@ -32,19 +39,17 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
             posts.map((post) => (
               <a class="rounded-[40px]" href={post.url + `/`} rel="prefetch">
                 <div class="blog-post p-2 pb-5 min-[420px]:p-5 min-[600px]:p-10 rounded-[40px] hover:bg-[#202020] transition-colors duration-300 ease-linear">
-                  <div class="rounded-[40px] overflow-hidden">
-                    <img
-                      class="hero-image rounded-[40px] transition-transform duration-300 ease-cubic"
-                      width="604"
-                      height="302"
-                      src={post.frontmatter.heroImage}
+                  <div class="rounded-[40px]">
+                    <Icon
+                      class="rounded-[40px] w-max-[604px] h-max-[302px]"
+                      name={post.frontmatter.svg}
                       alt="Illustration by Vladislav Boichenko"
                     />
                   </div>
                   <h2 class="blog-post-title text-3xl font-bold text-gray-200 transition-colors duration-300 ease-cubic mt-4">
                     {post.frontmatter.title}
                   </h2>
-                  <p class="text-gray-400">
+                  <p class="text-gray-400 mt-1">
                     <time>{post.frontmatter.pubDate}</time>
                     {post.frontmatter.updatedDate && (
                       <span>

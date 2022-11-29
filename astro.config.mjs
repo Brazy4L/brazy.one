@@ -4,15 +4,26 @@ import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import partytown from '@astrojs/partytown';
 import prefetch from '@astrojs/prefetch';
-import compress from "astro-compress";
+import compress from 'astro-compress';
 import robotsTxt from 'astro-robots-txt';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://brazy.one',
-  integrations: [mdx(), sitemap(), tailwind({
-    config: {
-      applyBaseStyles: false
-    }
-  }), partytown(), prefetch(), robotsTxt(), compress()]
+  markdown: {
+    shikiConfig: { theme: 'dark-plus' },
+  },
+  integrations: [
+    mdx(),
+    sitemap(),
+    tailwind({
+      config: {
+        applyBaseStyles: false,
+      },
+    }),
+    partytown(),
+    prefetch(),
+    robotsTxt(),
+    compress(),
+  ],
 });

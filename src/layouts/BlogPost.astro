@@ -12,11 +12,12 @@ export interface Props {
     pubDate?: string;
     updatedDate?: string;
     heroImage?: string;
+    svg?: string;
   };
 }
 
 const {
-  content: { title, description, pubDate, updatedDate, heroImage },
+  content: { title, description, pubDate, updatedDate, heroImage, svg },
 } = Astro.props;
 const timeToRead = readingTime(Astro.props.compiledContent());
 ---
@@ -63,12 +64,10 @@ const timeToRead = readingTime(Astro.props.compiledContent());
         </div>
         <p class="text-gray-400 text-center">by Vladislav Boichenko</p>
         {
-          heroImage && (
-            <img
-              class="rounded-sm mt-10"
-              width="684"
-              height="342"
-              src={heroImage}
+          svg && (
+            <Icon
+              name={svg}
+              class="mt-10 w-max-[684px] h-max-[342px]"
               alt="Illustration by Vladislav Boichenko"
             />
           )
@@ -76,13 +75,13 @@ const timeToRead = readingTime(Astro.props.compiledContent());
         <article class="post">
           <slot />
         </article>
-        <div class="text-gray-200 mt-10">
+        <div class="w-max text-gray-200 mt-10">
           <a
             href="/blog/"
             rel="prefetch"
-            class="flex gap-x-1 items-center underline"
+            class="flex gap-x-1 items-center underline text-lg hover:text-[#a786ff]"
           >
-            <Icon width="21px" height="21px" name="maki:arrow" />
+            <Icon width="28px" height="28px" name="maki:arrow" />
             <div>Back to BRAZY'S BLOG</div>
           </a>
         </div>
