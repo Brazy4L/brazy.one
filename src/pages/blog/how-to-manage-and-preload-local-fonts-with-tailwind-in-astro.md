@@ -3,7 +3,7 @@ layout: '../../layouts/BlogPost.astro'
 title: 'How to Manage and Preload Local Fonts with Tailwind in Astro'
 description: 'How to Manage and Preload Local Fonts with Tailwind in Astro.'
 pubDate: '29 November, 2022'
-updatedDate:
+updatedDate: '1 December, 2022'
 heroImage: '/how-to-manage-and-preload-local-fonts-with-tailwind-in-astro.png'
 svg: 'how-to-manage-and-preload-local-fonts-with-tailwind-in-astro'
 ---
@@ -14,7 +14,7 @@ An Astro project with a Tailwind integration.
 
 ## [Downloading Assets](#downloading-assets)
 
-First, we got to grab a font. The most convenient way I've discovered is through [google-webfonts-helper](https://gwfh.mranftl.com/fonts). Go there and download a font that you want. We are going to be using Open Sans as an example. Specifically the one with a <mark>.woff2</mark> extension. Because it is the most compressed format with a wide support.
+First, we got to grab a font. The most convenient way I've discovered is through <a href="https://gwfh.mranftl.com/fonts" target="_blank" rel="noopener">google-webfonts-helper</a>. Go there and download a font that you want. We are going to be using Open Sans as an example. Specifically the one with a <mark>.woff2</mark> extension. Because it is the most compressed format with a wide support.
 
 Create a <mark>fonts</mark> folder in your <mark>public</mark> directory. Extract your font there.
 
