@@ -1,9 +1,9 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import readingTime from '../js/readingTime';
-import { Icon } from 'astro-icon';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import readingTime from "../js/readingTime";
+import { Icon } from "astro-icon";
 
 export interface Props {
   content: {
@@ -30,15 +30,15 @@ const timeToRead = readingTime(Astro.props.compiledContent());
       image={heroImage}
     />
   </head>
-  <body class="min-h-screen flex flex-col max-w-[700px] mx-auto px-2">
+  <body class="mx-auto flex min-h-screen max-w-[700px] flex-col px-2">
     <Header />
     <main>
       <article class="mt-10 mb-10">
-        <h1 class="text-3xl font-bold text-gray-200 text-center">
+        <h1 class="text-center text-3xl font-bold text-gray-200">
           {title}
         </h1>
         <div
-          class="flex flex-wrap justify-center gap-x-1 text-gray-400 text-center mt-3"
+          class="mt-3 flex flex-wrap justify-center gap-x-1 text-center text-gray-400"
         >
           {pubDate && <time>{pubDate}</time>}
           {
@@ -62,12 +62,12 @@ const timeToRead = readingTime(Astro.props.compiledContent());
             )
           }
         </div>
-        <p class="text-gray-400 text-center">by Vladislav Boichenko</p>
+        <p class="text-center text-gray-400">by Vladislav Boichenko</p>
         {
           svg && (
             <Icon
               name={svg}
-              class="mt-10 w-max-[684px] h-max-[342px]"
+              class="w-max-[684px] h-max-[342px] mt-10"
               alt="Illustration by Vladislav Boichenko"
             />
           )
@@ -75,11 +75,11 @@ const timeToRead = readingTime(Astro.props.compiledContent());
         <article class="post">
           <slot />
         </article>
-        <div class="w-max text-gray-200 mt-10">
+        <div class="mt-10 w-max text-gray-200">
           <a
             href="/blog/"
             rel="prefetch"
-            class="flex gap-x-1 items-center underline text-lg hover:text-[#a786ff]"
+            class="flex items-center gap-x-1 text-lg underline hover:text-[#a786ff]"
           >
             <Icon width="28px" height="28px" name="maki:arrow" />
             <div>Back to BRAZY'S BLOG</div>

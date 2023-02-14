@@ -1,13 +1,13 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from "astro-icon";
 const today = new Date();
 ---
 
 <footer
-  class="bg-[#202020] text-gray-100 grid justify-items-center rounded-t-[20px] mt-auto py-4 gap-4"
+  class="mt-auto grid justify-items-center gap-4 rounded-t-[20px] bg-[#202020] py-4 text-gray-100"
 >
   <a
-    class="text-2xl font-bold hover:text-[#a786ff] duration-500 ease-cubic"
+    class="text-2xl font-bold duration-500 ease-cubic hover:text-[#a786ff]"
     href="mailto:me@brazy.one">me@brazy.one</a
   >
   <div class="flex gap-4">
@@ -19,7 +19,7 @@ const today = new Date();
       aria-label="GitHub"
     >
       <div
-        class="gh col-start-1 row-start-1 transition-opacity duration-500 ease-cubic w-[50px] h-[50px]"
+        class="gh col-start-1 row-start-1 h-[50px] w-[50px] transition-opacity duration-500 ease-cubic"
       >
       </div>
       <Icon
@@ -30,7 +30,7 @@ const today = new Date();
       />
     </a>
     <a
-      class="hover:text-[#1d9bf0] duration-500 ease-cubic"
+      class="duration-500 ease-cubic hover:text-[#1d9bf0]"
       href="https://twitter.com/Brazy4Lulz"
       target="_blank"
       rel="noopener"
@@ -39,7 +39,7 @@ const today = new Date();
       <Icon width="50px" height="50px" name="simple-icons:twitter" />
     </a>
   </div>
-  <div class="text-lg text-center">
+  <div class="text-center text-lg">
     © {today.getFullYear()} Vladislav Boichenko
   </div>
 </footer>

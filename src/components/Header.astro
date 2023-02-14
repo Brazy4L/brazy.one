@@ -3,16 +3,16 @@ const path = new URL(Astro.request.url).pathname;
 ---
 
 <header
-  class="text-xl font-bold text-gray-100 bg-[#202020] rounded-b-[20px] px-5"
+  class="rounded-b-[20px] bg-[#202020] px-5 text-xl font-bold text-gray-100"
 >
-  <nav class="py-7 flex justify-between items-center">
+  <nav class="flex items-center justify-between py-7">
     <div>
       <a class="link" href="/" rel="prefetch">BRAZY</a>
-      <div class={path === '/' ? 'active' : 'inactive'}></div>
+      <div class={path === "/" ? "active" : "inactive"}></div>
     </div>
     <div>
       <a class="link" href="/blog/" rel="prefetch">BLOG</a>
-      <div class={path === '/blog/' ? 'active' : 'inactive'}></div>
+      <div class={path === "/blog/" ? "active" : "inactive"}></div>
     </div>
   </nav>
 </header>
