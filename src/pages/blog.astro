@@ -37,15 +37,13 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
         <div class="grid gap-10 mt-10 mb-10">
           {
             posts.map((post) => (
-              <a class="rounded-[40px]" href={post.url + `/`} rel="prefetch">
-                <div class="blog-post p-2 pb-5 min-[420px]:p-5 min-[600px]:p-10 rounded-[40px] hover:bg-[#202020] transition-colors duration-300 ease-linear">
-                  <div class="rounded-[40px]">
-                    <Icon
-                      class="rounded-[40px] w-max-[604px] h-max-[302px]"
-                      name={post.frontmatter.svg}
-                      alt="Illustration by Vladislav Boichenko"
-                    />
-                  </div>
+              <a class="rounded-[20px]" href={post.url + `/`} rel="prefetch">
+                <div class="blog-post p-2 pb-5 min-[420px]:p-5 min-[600px]:p-10 rounded-[20px] hover:bg-[#202020] transition-colors duration-300 ease-linear">
+                  <Icon
+                    class="rounded-[20px] w-max-[604px] h-max-[302px]"
+                    name={post.frontmatter.svg}
+                    alt="Illustration by Vladislav Boichenko"
+                  />
                   <h2 class="blog-post-title text-3xl font-bold text-gray-200 transition-colors duration-300 ease-cubic mt-4">
                     {post.frontmatter.title}
                   </h2>

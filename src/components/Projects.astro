@@ -1,0 +1,50 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<h2 class="text-xl font-bold text-center mt-10 text-gray-200">PROJECTS</h2>
+<div class="grid mt-10">
+  <img
+    class="rounded-t-[20px]"
+    src="/somemore-3d.webp"
+    alt="image of the project"
+  />
+  <div
+    class="grid bg-[#eeeeee] text-gray-900 p-5 rounded-b-[20px] grid-cols-[1fr,min-content] min-[442px]:grid-cols-[1fr,150px] gap-x-4 gap-y-2 items-center"
+  >
+    <h3 class="row-start-1 text-lg font-bold">SOMEMORE</h3>
+    <span class="row-start-2">Discover Movies and TV Shows</span>
+    <a
+      class="grid w-fit justify-self-end rounded-full"
+      href="https://github.com/Brazy4L/somemore"
+    >
+      <Icon
+        class="text-gray-200 col-start-1 row-start-1 justify-self-end z-10 p-2 bg-[#202020] rounded-xl peer/github"
+        width="2.5rem"
+        height="2.5rem"
+        name="simple-icons:github"
+      />
+      <p
+        class="text-gray-200 col-start-1 row-start-1 justify-self-center w-0 py-1 pl-4 overflow-hidden bg-[#3f3f3f] self-center min-[442px]:peer-hover/github:w-[110px] rounded-full transition-[width] ease-cubic hover:w-[110px]"
+      >
+        GitHub
+      </p>
+    </a>
+    <a
+      class="grid w-fit justify-self-end bg-inherit"
+      href="https://somemore.vercel.app/"
+    >
+      <Icon
+        class="text-gray-200 col-start-1 row-start-1 justify-self-end z-10 p-2 bg-[#202020] rounded-xl peer/vercel"
+        width="2.5rem"
+        height="2.5rem"
+        name="simple-icons:vercel"
+      />
+      <p
+        class="text-gray-200 col-start-1 row-start-1 justify-self-center w-0 py-1 pl-4 overflow-hidden bg-[#3f3f3f] self-center min-[442px]:peer-hover/vercel:w-[150px] rounded-full transition-[width] ease-cubic hover:w-[150px]"
+      >
+        Deployment
+      </p>
+    </a>
+  </div>
+</div>

@@ -24,6 +24,6 @@ export default defineConfig({
     partytown(),
     prefetch(),
     robotsTxt(),
-    compress(),
+    compress({ img: false, svg: false }),
   ],
 });
