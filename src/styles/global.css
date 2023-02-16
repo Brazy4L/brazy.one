@@ -4,19 +4,19 @@
 
 @layer base {
   @font-face {
-    font-family: 'Major Mono Display';
+    font-family: "Major Mono Display";
     font-style: normal;
     font-weight: 400;
     font-display: block;
-    src: url('/fonts/major.woff2') format('woff2');
+    src: url("/fonts/major.woff2") format("woff2");
   }
 
   @font-face {
-    font-family: 'Train One';
+    font-family: "Train One";
     font-style: normal;
     font-weight: 400;
     font-display: block;
-    src: url('/fonts/train.woff2') format('woff2');
+    src: url("/fonts/train.woff2") format("woff2");
   }
 
   :root {
@@ -127,14 +127,15 @@
   border-radius: 100%;
   filter: drop-shadow(0 0 8px #ff1900de);
   pointer-events: none;
-  animation: particleUp 4s ease-out infinite;
+  opacity: 0;
+  animation: particleUp 4s ease-out infinite 4s;
 }
 
 @keyframes particleUp {
   0% {
     opacity: 0;
   }
-  5% {
+  15% {
     opacity: 1;
   }
   20% {
@@ -142,8 +143,7 @@
   }
   25% {
     opacity: 0;
-    top: -60%;
-    transform: scale(0.5);
+    transform: translateY(-150px) scale(0.5);
   }
   100% {
     opacity: 0;

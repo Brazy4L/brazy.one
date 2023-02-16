@@ -6,8 +6,12 @@ import { Icon } from "astro-icon";
 <div class="mt-10 grid">
   <img
     class="rounded-t-[20px]"
-    src="/somemore-3d.webp"
-    alt="image of the project"
+    width="1920"
+    height="1080"
+    src="/somemore-3d-1920.webp"
+    alt="Image of the project"
+    srcset="/somemore-3d-480.webp 480w, /somemore-3d-720.webp 720w, /somemore-3d-960.webp 960w, /somemore-3d-1440.webp 1440w, /somemore-3d-1920.webp 1920w"
+    sizes="480w, (min-width: 480px) 720w, (min-width: 720px) 960w, (min-width: 960px) 1440w, (min-width: 1440px) 1920w"
   />
   <div
     class="grid grid-cols-[1fr,min-content] items-center gap-x-4 gap-y-2 rounded-b-[20px] bg-[#eeeeee] p-5 text-gray-900 min-[442px]:grid-cols-[1fr,150px]"
@@ -22,8 +26,8 @@ import { Icon } from "astro-icon";
     >
       <Icon
         class="text-gray-200 col-start-1 row-start-1 justify-self-end z-10 p-2 bg-[#202020] rounded-xl peer/github"
-        width="2.5rem"
-        height="2.5rem"
+        width="40px"
+        height="40px"
         name="simple-icons:github"
       />
       <p
@@ -40,8 +44,8 @@ import { Icon } from "astro-icon";
     >
       <Icon
         class="text-gray-200 col-start-1 row-start-1 justify-self-end z-10 p-2 bg-[#202020] rounded-xl peer/vercel"
-        width="2.5rem"
-        height="2.5rem"
+        width="40px"
+        height="40px"
         name="simple-icons:vercel"
       />
       <p
