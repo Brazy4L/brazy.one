@@ -26,31 +26,6 @@
   }
 }
 
-.active {
-  width: 100%;
-  height: 4px;
-  background-color: #a786ff;
-  border-radius: 2px;
-}
-
-.inactive {
-  margin: 0 auto;
-  width: 0%;
-  height: 4px;
-  background-color: #a786ff;
-  border-radius: 2px;
-  transition: width 0.3s ease-out;
-  transform: translateZ(0);
-}
-
-.link:hover + .inactive {
-  width: 100%;
-  height: 4px;
-  background-color: #a786ff;
-  border-radius: 2px;
-  transition: width 0.37s ease;
-}
-
 .rainbow {
   --bg-size: 300%;
   --color-one: hsl(50 100% 50%);
