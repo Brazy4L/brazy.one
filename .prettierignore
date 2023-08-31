@@ -3,6 +3,10 @@
 /dist
 /.astro
 
+src/env.d.ts
+README.md
+.prettierrc
+astro.config.mjs
 package-lock.json
 package.json
 tsconfig.json
