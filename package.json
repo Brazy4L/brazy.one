@@ -1,8 +1,7 @@
 {
-  "name": "brazyone",
+  "name": "brazy.one",
   "type": "module",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,20 +10,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^0.11.5",
-    "@astrojs/prefetch": "^0.1.1",
-    "@astrojs/rss": "^1.0.3",
-    "@astrojs/sitemap": "^1.0.0",
-    "@astrojs/tailwind": "^2.1.2",
-    "astro": "^1.6.0",
-    "astro-compress": "^1.1.10",
-    "astro-icon": "^0.8.0",
-    "tailwindcss": "^3.2.3"
-  },
-  "devDependencies": {
-    "astro-robots-txt": "^0.3.10",
-    "prettier": "^2.8.4",
-    "prettier-plugin-astro": "^0.8.0",
-    "prettier-plugin-tailwindcss": "^0.2.2"
+    "astro": "^3.0.5"
   }
 }

@@ -1,42 +1,14 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Main from "../components/Main.astro";
-import AboutMe from "../components/AboutMe.astro";
-import Tech from "../components/Tech.astro";
-import Projects from "../components/Projects.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 ---
 
-<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <BaseHead
-      title={SITE_TITLE}
-      description={SITE_DESCRIPTION}
-      image="/main.png"
-    />
-    <meta
-      name="google-site-verification"
-      content="HRIPUva_znX8XYUdPiVqEvCVfxaRvuaM4EFA1QZ6k8M"
-    />
-    <link
-      rel="preload"
-      href="/fonts/major.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-  </head>
-  <body class="mx-auto flex min-h-screen max-w-[700px] flex-col px-2">
-    <Header />
-    <main class="mb-10">
-      <Main />
-      <AboutMe />
-      <Tech />
-      <Projects />
-    </main>
-    <Footer />
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1>Astro</h1>
+	</body>
 </html>
