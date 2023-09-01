@@ -32,7 +32,7 @@ const { title, description, pubDate, updatedDate, heroImage, svg } = Astro.props
           alt="Illustration"
           transition:name={`${title}1`}
         />
-        <div class="post">
+        <div class="post" transition:animate="slide">
           <slot />
         </div>
       </article>

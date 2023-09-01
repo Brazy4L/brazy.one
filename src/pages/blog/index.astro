@@ -17,7 +17,7 @@ const posts = (await getCollection('blog')).sort(
   </head>
   <body class="mx-auto max-w-2xl px-4">
     <Header />
-    <main class="mt-8">
+    <main class="mt-8" transition:animate="slide">
       {
         posts.map((post) => (
           <a class="" href={`/blog/${post.slug}`}>
