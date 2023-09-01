@@ -2,7 +2,7 @@
 import Head from '../components/Head.astro'
 import Header from '../components/Header.astro'
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props
+const { title, description, pubDate, updatedDate, heroImage, svg } = Astro.props
 ---
 
 <html lang="en">
@@ -13,8 +13,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props
     <Header />
     <main class="mt-8">
       <article>
-        <h1 class="text-2xl font-semibold">{title}</h1>
-        <div class="text-inaccessible mt-4 text-lg">
+        <h1 class="text-2xl font-semibold" transition:name={`${title}2`}>
+          {title}
+        </h1>
+        <div
+          class="text-inaccessible mt-4 text-lg"
+          transition:name={`${title}3`}
+        >
           <time datetime="">{pubDate}</time> (Updated: <time datetime=""
             >{updatedDate}</time
           >)
@@ -23,8 +28,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props
           class="mt-8 rounded-lg"
           width={640}
           height={336}
-          src={`/blog/${heroImage}`}
+          src={`/blog/${svg}`}
           alt="Illustration"
+          transition:name={`${title}1`}
         />
         <div class="post">
           <slot />
@@ -33,7 +39,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props
     </main>
     <hr class="border-inaccessible mt-8 rounded-full border-t-2" />
     <footer class="my-8 grid justify-items-center text-xl">
-      <a class="text-inaccessible hover:text-white transition-colors" href="/blog">back to blog</a>
+      <a
+        class="text-inaccessible transition-colors hover:text-white"
+        href="/blog">back to blog</a
+      >
     </footer>
   </body>
 </html>

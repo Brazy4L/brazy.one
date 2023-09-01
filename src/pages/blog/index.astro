@@ -26,12 +26,21 @@ const posts = (await getCollection('blog')).sort(
                 class="rounded-lg"
                 width="160"
                 height="84"
-                src={`blog/${post.data.heroImage}`}
+                src={`blog/${post.data.svg}`}
                 alt="Illustration"
+                transition:name={`${post.data.title}1`}
               />
               <div>
-                <h2>{post.data.title}</h2>
-                <p class="text-inaccessible">{post.data.pubDate}</p>
+                <h2 transition:name={`${post.data.title}2`}>
+                  {post.data.title}
+                </h2>
+                <div
+                  class="text-inaccessible"
+                  transition:name={`${post.data.title}3`}
+                >
+                  <time datetime="">{post.data.pubDate}</time> (Updated:{' '}
+                  <time datetime="">{post.data.updatedDate}</time>)
+                </div>
               </div>
             </div>
           </a>
