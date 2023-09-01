@@ -4,11 +4,9 @@ import Header from '../../components/Header.astro'
 import { getCollection } from 'astro:content'
 import { formatDate } from '../../utils/utils'
 
-// new Date(b.frontmatter.pubDate).valueOf() -
-// new Date(a.frontmatter.pubDate).valueOf()
-
 const posts = (await getCollection('blog')).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+  (a, b) =>
+    new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
 )
 ---
 
@@ -22,11 +20,11 @@ const posts = (await getCollection('blog')).sort(
   </head>
   <body class="mx-auto max-w-2xl px-4">
     <Header />
-    <main class="mt-8" transition:animate="slide">
+    <main class="mt-8 flex flex-col gap-4" transition:animate="slide">
       {
         posts.map((post) => (
-          <a class="" href={`/blog/${post.slug}`}>
-            <div class="flex flex-wrap items-center gap-4 rounded-lg p-2 ring-2 ring-pretty transition-colors ease-cubic hover:bg-pretty">
+          <a class="group" href={`/blog/${post.slug}`}>
+            <div class="flex flex-wrap items-center gap-4 rounded-lg p-2 ring-2 ring-pretty transition-colors ease-cubic group-hover:bg-pretty">
               <img
                 class="rounded-lg"
                 width="160"
