@@ -2,6 +2,7 @@
 import Head from '../../components/Head.astro'
 import Header from '../../components/Header.astro'
 import { getCollection } from 'astro:content'
+import { formatDate } from '../../utils/utils'
 
 // new Date(b.frontmatter.pubDate).valueOf() -
 // new Date(a.frontmatter.pubDate).valueOf()
@@ -42,8 +43,13 @@ const posts = (await getCollection('blog')).sort(
                   class="text-inaccessible"
                   transition:name={`${post.data.title}3`}
                 >
-                  <time datetime="">{post.data.pubDate}</time> (Updated:{' '}
-                  <time datetime="">{post.data.updatedDate}</time>)
+                  <time datetime={post.data.pubDate}>
+                    {formatDate(post.data.pubDate)}
+                  </time>{' '}
+                  (Updated:{' '}
+                  <time datetime={post.data.updatedDate}>
+                    {formatDate(post.data.updatedDate)}
+                  </time>)
                 </div>
               </div>
             </div>

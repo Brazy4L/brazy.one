@@ -1,13 +1,31 @@
 ---
 import Head from '../components/Head.astro'
 import Header from '../components/Header.astro'
+import { formatDate } from '../utils/utils'
 
 const { title, description, pubDate, updatedDate, heroImage, svg } = Astro.props
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  image: [`https://brazy.one/${heroImage}`],
+  datePublished: pubDate,
+  dateModified: updatedDate,
+  author: [
+    {
+      '@type': 'Person',
+      name: 'Vladislav Boichenko',
+      url: 'https://brazy.one',
+    },
+  ],
+}
 ---
 
 <html lang="en">
   <head>
     <Head title={title} description={description} image={heroImage} />
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   </head>
   <body class="mx-auto max-w-2xl px-4">
     <Header />
@@ -20,8 +38,8 @@ const { title, description, pubDate, updatedDate, heroImage, svg } = Astro.props
           class="mt-4 text-lg text-inaccessible"
           transition:name={`${title}3`}
         >
-          <time datetime="">{pubDate}</time> (Updated: <time datetime=""
-            >{updatedDate}</time
+          <time datetime={pubDate}>{formatDate(pubDate)}</time> (Updated: <time
+            datetime={updatedDate}>{formatDate(updatedDate)}</time
           >)
         </div>
         <img
@@ -44,5 +62,7 @@ const { title, description, pubDate, updatedDate, heroImage, svg } = Astro.props
         href="/blog">back to blog</a
       >
     </footer>
+
+     ../utils/utils
   </body>
 </html>
