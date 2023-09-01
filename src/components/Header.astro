@@ -1,0 +1,44 @@
+---
+const path = Astro.url.pathname
+---
+
+<header class="mt-8">
+  <nav class="flex justify-center gap-4">
+    <a
+      class={`${
+        path === '/' ? 'bg-pretty text-white' : 'text-inaccessible'
+      } flex gap-2 rounded-full p-2 hover:text-white hover:bg-pretty transition-colors`}
+      href="/"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24"
+        viewBox="0 -960 960 960"
+        width="24"
+        ><path
+          fill="currentColor"
+          d="M180-120q-25 0-42.5-17.5T120-180v-76l160-142v278H180Zm140 0v-160h320v160H320Zm360 0v-328L509-600l121-107 190 169q10 9 15 20.5t5 24.5v313q0 25-17.5 42.5T780-120H680ZM120-310v-183q0-13 5-25t15-20l300-266q8-8 18.5-11.5T480-819q11 0 21.5 3.5T520-804l80 71-480 423Z"
+        ></path></svg
+      >
+       home
+    </a>
+    <a
+      class={`${
+        path === '/blog' ? 'bg-pretty text-white' : 'text-inaccessible'
+      } flex gap-2 rounded-full p-2 hover:text-white hover:bg-pretty transition-colors`}
+      href="/blog"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24"
+        viewBox="0 -960 960 960"
+        width="24"
+        ><path
+          fill="currentColor"
+          d="M520-120q-17 0-28.5-11.5T480-160v-28q0-8 3-15.5t9-13.5l200-200 85 85-200 200q-6 6-13.5 9t-15.5 3h-28ZM160-320q-17 0-28.5-11.5T120-360q0-17 11.5-28.5T160-400h200q17 0 28.5 11.5T400-360q0 17-11.5 28.5T360-320H160Zm645-40-85-85 29-29q11-11 28-11t28 11l29 29q11 11 11 28t-11 28l-29 29ZM160-480q-17 0-28.5-11.5T120-520q0-17 11.5-28.5T160-560h360q17 0 28.5 11.5T560-520q0 17-11.5 28.5T520-480H160Zm0-160q-17 0-28.5-11.5T120-680q0-17 11.5-28.5T160-720h360q17 0 28.5 11.5T560-680q0 17-11.5 28.5T520-640H160Z"
+        ></path></svg
+      >
+       blog
+    </a>
+  </nav>
+</header>
