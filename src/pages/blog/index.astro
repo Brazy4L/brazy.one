@@ -25,7 +25,7 @@ const posts = (await getCollection('blog')).sort(
       {
         posts.map((post) => (
           <a class="" href={`/blog/${post.slug}`}>
-            <div class="hover:bg-pretty ring-pretty flex flex-wrap items-center gap-4 rounded-lg p-2 ring-2 transition-colors">
+            <div class="hover:bg-pretty ring-pretty ease-cubic flex flex-wrap items-center gap-4 rounded-lg p-2 ring-2 transition-colors">
               <img
                 class="rounded-lg"
                 width="160"

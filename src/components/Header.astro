@@ -7,7 +7,7 @@ const path = Astro.url.pathname
     <a
       class={`${
         path === '/' ? 'bg-pretty text-white' : 'text-inaccessible'
-      } flex gap-2 rounded-full p-2 hover:text-white hover:bg-pretty transition-colors`}
+      } flex gap-2 rounded-full ease-cubic p-2 hover:text-white hover:bg-pretty transition-colors`}
       href="/"
     >
       <svg
@@ -25,7 +25,7 @@ const path = Astro.url.pathname
     <a
       class={`${
         path === '/blog/' ? 'bg-pretty text-white' : 'text-inaccessible'
-      } flex gap-2 rounded-full p-2 hover:text-white hover:bg-pretty transition-colors`}
+      } flex gap-2 rounded-full ease-cubic p-2 hover:text-white hover:bg-pretty transition-colors`}
       href="/blog/"
     >
       <svg
