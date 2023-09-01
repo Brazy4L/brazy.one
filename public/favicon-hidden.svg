@@ -1,14 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-<path d="M21 1L11 31H21L31 1H21Z" fill="#fa00ff" />
+<path id="c" d="M21 1L11 31H21L31 1H21Z" />
 <path id="a" d="M11 31L1 1H11L21 31H11Z" />
 <path id="b" d="M21 31L16 16L18 10L23 25L21 31Z" />
 <style>
 #a {fill: #000}
 #b {fill: #fff}
+#c {fill: #000}
 @media (prefers-color-scheme: dark)
 {
 #a {fill: #fff}
 #b {fill: #000}
+#c {fill: #fff}
 }
 </style>
 </svg>
