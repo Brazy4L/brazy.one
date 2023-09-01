@@ -1,6 +1,14 @@
 ---
 import Head from '../../components/Head.astro'
 import Header from '../../components/Header.astro'
+import { getCollection } from 'astro:content'
+
+// new Date(b.frontmatter.pubDate).valueOf() -
+// new Date(a.frontmatter.pubDate).valueOf()
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+)
 ---
 
 <html lang="en">
@@ -9,5 +17,26 @@ import Header from '../../components/Header.astro'
   </head>
   <body class="mx-auto max-w-2xl px-4">
     <Header />
+    <main class="mt-8">
+      {
+        posts.map((post) => (
+          <a class="" href={`/blog/${post.slug}`}>
+            <div class="hover:bg-pretty ring-pretty flex flex-wrap items-center gap-4 rounded-lg p-2 ring-2 transition-colors">
+              <img
+                class="rounded-lg"
+                width="160"
+                height="84"
+                src={`blog/${post.data.heroImage}`}
+                alt="Illustration"
+              />
+              <div>
+                <h2>{post.data.title}</h2>
+                <p class="text-inaccessible">{post.data.pubDate}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </main>
   </body>
 </html>

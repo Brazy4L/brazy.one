@@ -1,0 +1,39 @@
+---
+import Head from '../components/Head.astro'
+import Header from '../components/Header.astro'
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props
+---
+
+<html lang="en">
+  <head>
+    <Head title={title} description={description} image={heroImage} />
+  </head>
+  <body class="mx-auto max-w-2xl px-4">
+    <Header />
+    <main class="mt-8">
+      <article>
+        <h1 class="text-2xl font-semibold">{title}</h1>
+        <div class="text-inaccessible mt-4 text-lg">
+          <time datetime="">{pubDate}</time> (Updated: <time datetime=""
+            >{updatedDate}</time
+          >)
+        </div>
+        <img
+          class="mt-8 rounded-lg"
+          width={640}
+          height={336}
+          src={`/blog/${heroImage}`}
+          alt="Illustration"
+        />
+        <div class="post">
+          <slot />
+        </div>
+      </article>
+    </main>
+    <hr class="border-inaccessible mt-8 rounded-full border-t-2" />
+    <footer class="my-8 grid justify-items-center text-xl">
+      <a class="text-inaccessible hover:text-white transition-colors" href="/blog">back to blog</a>
+    </footer>
+  </body>
+</html>

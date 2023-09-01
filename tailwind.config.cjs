@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        magnificent: '#fa00ff',
+        magnificent: '#d698ff',
         pretty: '#212025',
-        inaccessible: '#727272',
+        inaccessible: '#959595',
       },
     },
   },
