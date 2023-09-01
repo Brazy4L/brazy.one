@@ -17,7 +17,7 @@ const { title, description, pubDate, updatedDate, heroImage, svg } = Astro.props
           {title}
         </h1>
         <div
-          class="text-inaccessible mt-4 text-lg"
+          class="mt-4 text-lg text-inaccessible"
           transition:name={`${title}3`}
         >
           <time datetime="">{pubDate}</time> (Updated: <time datetime=""
@@ -37,10 +37,10 @@ const { title, description, pubDate, updatedDate, heroImage, svg } = Astro.props
         </div>
       </article>
     </main>
-    <hr class="border-inaccessible mt-8 rounded-full border-t-2" />
+    <hr class="mt-8 rounded-full border-t-2 border-inaccessible" />
     <footer class="my-8 grid justify-items-center text-xl">
       <a
-        class="text-inaccessible ease-cubic transition-colors hover:text-white"
+        class="text-inaccessible transition-colors ease-cubic hover:text-white"
         href="/blog">back to blog</a
       >
     </footer>
