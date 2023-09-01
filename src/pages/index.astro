@@ -5,11 +5,18 @@ import Header from '../components/Header.astro'
 
 <html lang="en">
   <head>
-    <Head title="Vladislav Boichenko" description="desc" image="" />
+    <Head
+      title="Vladislav Boichenko"
+      description="The world's sexiest developer"
+      image="/content/home.png"
+    />
   </head>
   <body class="mx-auto max-w-2xl px-4">
     <Header />
-    <main class="mt-48 grid justify-items-center sm:mt-64" transition:animate="slide">
+    <main
+      class="mt-48 grid justify-items-center sm:mt-64"
+      transition:animate="slide"
+    >
       <h1 class="text-center text-[clamp(1.75rem,8vmin,3.5rem)] font-semibold">
         VLADISLAV BOICHENKO
       </h1>
@@ -19,8 +26,14 @@ import Header from '../components/Header.astro'
         a web developer
       </p>
     </main>
-    <hr class="border-inaccessible mt-8 rounded-full border-t-2" transition:animate="slide" />
-    <footer class="mt-8 grid justify-items-center gap-6 text-2xl" transition:animate="slide">
+    <hr
+      class="border-inaccessible mt-8 rounded-full border-t-2"
+      transition:animate="slide"
+    />
+    <footer
+      class="mt-8 grid justify-items-center gap-6 text-2xl"
+      transition:animate="slide"
+    >
       <a
         class="text-inaccessible transition-colors hover:text-white"
         href="mailto:me@brazy.one"

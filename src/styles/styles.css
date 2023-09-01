@@ -49,3 +49,8 @@
   background-color: #212025;
   color: #fff;
 }
+
+::selection {
+  color: #000;
+  background: #d698ff;
+}

@@ -13,7 +13,11 @@ const posts = (await getCollection('blog')).sort(
 
 <html lang="en">
   <head>
-    <Head title="Blog | BRAZY" description="desc" image="" />
+    <Head
+      title="BLOG | BRAZY"
+      description="Tales about my journey in web development"
+      image="/content/blog.png"
+    />
   </head>
   <body class="mx-auto max-w-2xl px-4">
     <Header />
@@ -26,7 +30,7 @@ const posts = (await getCollection('blog')).sort(
                 class="rounded-lg"
                 width="160"
                 height="84"
-                src={`blog/${post.data.svg}`}
+                src={post.data.svg}
                 alt="Illustration"
                 transition:name={`${post.data.title}1`}
               />

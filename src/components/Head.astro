@@ -1,6 +1,6 @@
 ---
 import '../styles/styles.css'
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from 'astro:transitions'
 
 interface Props {
   title: string
@@ -31,9 +31,13 @@ const { title, description, image } = Astro.props
 <ViewTransitions />
 
 <script>
-  const favicon = document.querySelector('link[rel="icon"]')!
-  document.addEventListener('visibilitychange', () => {
+  const visibility = () => {
+    const favicon = document.querySelector('link[rel="icon"]')!
     const hidden = document.hidden
     favicon.setAttribute('href', `/favicon${hidden ? '-hidden' : ''}.svg`)
+  }
+
+  document.addEventListener('astro:page-load', () => {
+    document.addEventListener('visibilitychange', visibility)
   })
 </script>
