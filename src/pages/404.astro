@@ -1,47 +1,23 @@
-<!DOCTYPE html>
+---
+import Head from '../components/Head.astro'
+import Header from '../components/Header.astro'
+---
+
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>404: Not Found</title>
-    <style>
-      :root {
-        background-color: #121212;
-        color: #f1ebeb;
-      }
-      body {
-        margin: 0;
-      }
-      h1 {
-        margin: 0;
-      }
-      .main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        width: 100vw;
-        gap: 30px;
-        font-size: 3rem;
-        font-family: sans-serif;
-      }
-      .error {
-        font-weight: 700;
-        color: #59c3ff;
-      }
-      .back {
-        color: #f1ebeb;
-      }
-    </style>
+    <Head title="404 - Not Found" description="" image="" />
   </head>
-  <body>
-    <main>
-      <h1 class="main">
-        <img width="280" height="280" src="/favicon.svg" alt="logo" />
-        <span><span class="error">404:</span> Not Found</span>
-        <a class="back" href="/">back to brazy.one</a>
+  <body class="mx-auto max-w-2xl px-4">
+    <Header />
+    <main class="flex min-h-[calc(100vh-72px)] flex-col justify-center py-8">
+      <h1 class="text-center text-[clamp(1.75rem,8vmin,3.5rem)] font-semibold">
+        404
       </h1>
+      <p
+        class="text-center text-[clamp(1.75rem,8vmin,3.5rem)] font-semibold text-inaccessible"
+      >
+        not found
+      </p>
     </main>
   </body>
 </html>

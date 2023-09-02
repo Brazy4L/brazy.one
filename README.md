@@ -1,3 +1,1 @@
-## Vladislav Boichenko
-
-This is my personal site and blog: [brazy.one](https://brazy.one).
+# [BRAZY.ONE THE ONE](https://brazy.one)

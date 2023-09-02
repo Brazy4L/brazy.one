@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    background-color: #000;
+    scroll-behavior: smooth;
+  }
+}
+
+.post h2 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.post p {
+  font-size: 1.125rem;
+  color: #c7ceda;
+  margin-top: 1rem;
+}
+
+.post a {
+  color: #fff;
+  text-decoration: underline;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.24, 0.11, 0.27, 1);
+  transition-duration: 150ms;
+}
+
+.post h2 a {
+  text-decoration: none;
+}
+
+.post a:hover {
+  color: #d698ff;
+}
+
+.astro-code {
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.post mark {
+  border-radius: 777px;
+  padding: 0 0.5rem 0.25rem 0.5rem;
+  background-color: #212025;
+  color: #fff;
+}
+
+::selection {
+  color: #000;
+  background: #d698ff;
+}
