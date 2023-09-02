@@ -2,6 +2,9 @@
 import Head from '../components/Head.astro'
 import Header from '../components/Header.astro'
 import { formatDate } from '../utils/utils'
+import type { CollectionEntry } from 'astro:content';
+
+type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage, svg } = Astro.props
 
