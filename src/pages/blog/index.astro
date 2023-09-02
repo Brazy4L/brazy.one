@@ -23,7 +23,7 @@ const posts = (await getCollection('blog')).sort(
     <main class="mt-8 flex flex-col gap-4" transition:animate="slide">
       {
         posts.map((post) => (
-          <a class="group" href={`/blog/${post.slug}`}>
+          <a class="group" href={`/blog/${post.slug}/`}>
             <div class="flex flex-wrap items-center gap-4 rounded-lg p-2 ring-2 ring-pretty transition-colors ease-cubic group-hover:bg-pretty">
               <img
                 class="rounded-lg"
