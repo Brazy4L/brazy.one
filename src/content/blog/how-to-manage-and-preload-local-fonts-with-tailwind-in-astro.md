@@ -2,7 +2,7 @@
 title: 'How to Manage and Preload Local Fonts with Tailwind in Astro'
 description: 'First, we got to grab a font. The most convenient way I’ve discovered is through google-webfonts-helper. Go there and download a font that you want. We are going to be using Open Sans as an example. Specifically the one with a .woff2 extension. Because it is the most compressed format with a wide support.'
 pubDate: '2022-11-29'
-updatedDate: '2022-12-01'
+updatedDate: '2023-09-02'
 heroImage: '/content/how-to-manage-and-preload-local-fonts-with-tailwind-in-astro.png'
 svg: '/content/how-to-manage-and-preload-local-fonts-with-tailwind-in-astro.svg'
 ---
@@ -56,7 +56,7 @@ Now we need to add tailwind and our local fonts into our main <mark>.css</mark> 
 You want to make sure that this file is getting imported on every page you want to have it on. Put it into `<Head />` or `<Layout />` component. Also, you can import it on a page directly. Like this:
 
 ```coffee
-import '../styles/main.css';
+import '../styles/main.css'
 ```
 
 For convenience we can add the font to <mark>tailwind.config.cjs</mark>
