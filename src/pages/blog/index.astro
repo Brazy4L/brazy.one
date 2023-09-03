@@ -50,11 +50,11 @@ const posts = (await getCollection('blog')).sort(
                   <time datetime={post.data.pubDate}>
                     {formatDate(post.data.pubDate)}
                   </time>{' '}
-                  (Updated:{' '}
+                  {'('}Updated:{' '}
                   <time datetime={post.data.updatedDate}>
                     {formatDate(post.data.updatedDate)}
                   </time>
-                  )
+                  {')'}
                 </div>
               </div>
             </div>
