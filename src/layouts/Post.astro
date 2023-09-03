@@ -2,11 +2,12 @@
 import Head from '../components/Head.astro'
 import Header from '../components/Header.astro'
 import { formatDate } from '../utils/utils'
-import type { CollectionEntry } from 'astro:content';
+import type { CollectionEntry } from 'astro:content'
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<'blog'>['data']
 
-const { title, description, pubDate, updatedDate, heroImage, svg } = Astro.props
+const { title, description, pubDate, updatedDate, heroImage, svg, alt } =
+  Astro.props
 
 const schema = {
   '@context': 'https://schema.org',
@@ -27,7 +28,11 @@ const schema = {
 
 <html lang="en">
   <head>
-    <Head title={`${title} | BRAZY`} description={description} image={heroImage} />
+    <Head
+      title={`${title} | BRAZY`}
+      description={description}
+      image={heroImage}
+    />
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   </head>
   <body class="mx-auto max-w-2xl px-4">
@@ -50,7 +55,7 @@ const schema = {
           width={640}
           height={336}
           src={svg}
-          alt="Illustration"
+          alt={alt}
           transition:name={`${title}1`}
         />
         <div class="post" transition:animate="slide">

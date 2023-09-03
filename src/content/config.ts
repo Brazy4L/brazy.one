@@ -8,6 +8,7 @@ const blog = defineCollection({
     updatedDate: z.string(),
     heroImage: z.string(),
     svg: z.string(),
+    alt: z.string(),
   }),
 })
 

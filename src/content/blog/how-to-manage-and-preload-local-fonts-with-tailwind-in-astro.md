@@ -5,6 +5,7 @@ pubDate: '2022-11-29'
 updatedDate: '2023-09-02'
 heroImage: '/content/how-to-manage-and-preload-local-fonts-with-tailwind-in-astro.png'
 svg: '/content/how-to-manage-and-preload-local-fonts-with-tailwind-in-astro.svg'
+alt: 'A @font-face illustration'
 ---
 
 ## [Prerequisites](#prerequisites)

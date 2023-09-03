@@ -32,11 +32,11 @@ const posts = (await getCollection('blog')).sort(
           <a class="group" href={`/blog/${post.slug}/`}>
             <div class="flex flex-wrap items-center gap-4 rounded-lg p-2 ring-2 ring-pretty transition-colors ease-cubic group-hover:bg-pretty">
               <img
-                class="rounded-lg"
+                class="rounded-lg max-[671px]:w-full"
                 width="160"
                 height="84"
                 src={post.data.svg}
-                alt="Illustration"
+                alt={post.data.alt}
                 transition:name={`${post.data.title}1`}
               />
               <div>
@@ -50,10 +50,11 @@ const posts = (await getCollection('blog')).sort(
                   <time datetime={post.data.pubDate}>
                     {formatDate(post.data.pubDate)}
                   </time>{' '}
-                  (Updated:{' '}
+                  {'('}Updated:{' '}
                   <time datetime={post.data.updatedDate}>
                     {formatDate(post.data.updatedDate)}
-                  </time>)
+                  </time>
+                  {')'}
                 </div>
               </div>
             </div>
